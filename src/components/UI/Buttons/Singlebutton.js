@@ -2,8 +2,11 @@ import React from 'react';
 
 import './Singlebutton.styles.scss';
 
-const SingleButton = ({ children, isGoogleSignIn, ...otherProps }) => (
-    <button className={`${isGoogleSignIn ? 'google-sign-in': ''} single-button`} {...otherProps}>
+const SingleButton = ({ children, isGoogleSignIn, inverted, ...otherProps }) => (
+    <button 
+        className={`${inverted ? 'inverted': ''} ${isGoogleSignIn ? 'google-sign-in': ''} single-button`} 
+        {...otherProps}
+    >
         {children}
     </button>
 );
